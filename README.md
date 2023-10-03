@@ -1,4 +1,5 @@
 # 💯 Meetup Scheduler
+
 > [!NOTE]
 > Reference : Code snapshots and materials for our "React - The Complete Guide" course (https://acad.link/reactjs)
 
@@ -7,6 +8,10 @@
 # 📖 Introduction
 
 <!--
+- Implement a SPA for scheduling meetups
+
+1. Using Next.js
+
 
 1. Handling HTTP request
 1. Implementing async/await (fetch..then()) to get response
