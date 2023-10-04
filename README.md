@@ -10,7 +10,7 @@
 <!--
 - Implement a SPA for scheduling meetups
 
-1. Using Next.js framework
+1. Using Next.js framework `getStaticProps()`, `getStaticPaths()`, `getServerSideProps()`
 2. Using MongdoDB Atlas database `npm install mongodb`
 
 1. Handling HTTP request
