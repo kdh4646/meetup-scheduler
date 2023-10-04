@@ -27,9 +27,10 @@ function HomePage(props) {
 */
 export async function getStaticProps() {
   //fetch data
-  const client = await MongoClient.connect(
-    "mongodb+srv://kdh4646:oHjS8egRofmlBB1Q@cluster0.jiylnit.mongodb.net/meetups?retryWrites=true&w=majority"
-  );
+  const client = await MongoClient
+    .connect
+    //mongoDB URI needed
+    ();
 
   const db = client.db();
 

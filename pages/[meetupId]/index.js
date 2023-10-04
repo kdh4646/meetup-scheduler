@@ -23,9 +23,10 @@ function MeetupDetails(props) {
 
 //for pre-rendering all dynamic path pages (kind of default setting)
 export async function getStaticPaths() {
-  const client = await MongoClient.connect(
-    "mongodb+srv://kdh4646:oHjS8egRofmlBB1Q@cluster0.jiylnit.mongodb.net/meetups?retryWrites=true&w=majority"
-  );
+  const client = await MongoClient
+    .connect
+    //mongoDB URI needed
+    ();
 
   const db = client.db();
   const meetupsCollection = db.collection("meetups");
@@ -45,9 +46,10 @@ export async function getStaticProps(context) {
   //dynamic url path from params
   const meetupId = context.params.meetupId;
 
-  const client = await MongoClient.connect(
-    "mongodb+srv://kdh4646:oHjS8egRofmlBB1Q@cluster0.jiylnit.mongodb.net/meetups?retryWrites=true&w=majority"
-  );
+  const client = await MongoClient
+    .connect
+    //mongoDB URI needed
+    ();
 
   const db = client.db();
   const meetupsCollection = db.collection("meetups");
