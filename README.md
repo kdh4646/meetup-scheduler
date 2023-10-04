@@ -6,24 +6,10 @@
 # 🚧 In progres.. 🚧
 
 # 📖 Introduction
-
-<!--
 - Implement a SPA for scheduling meetups
-
 1. Using Next.js framework `getStaticProps()`, `getStaticPaths()`, `getServerSideProps()`
 2. Using MongdoDB Atlas database `npm install mongodb`
 
-1. Handling HTTP request
-1. Implementing async/await (fetch..then()) to get response
-2. Using The-Star-Wars API for GET data
-3. Using Firebase for POST data
-
-- Implement a simple React page for
-1. Learning Class based components
-2. Using `componentDidUpdate()`, `componentDidMount()`, `componentDidCatch()`, `React.Component`
-3. Control errors which only supported by Class based components
--->
-
 # 👀 Screenshots
+![image](https://github.com/kdh4646/meetup-scheduler/assets/71913953/73107614-1f96-49ef-adcc-f482cefe5796)
 
-<!--![image](https://github.com/kdh4646/class-based-components/assets/71913953/59ffe86c-e5ab-4135-9626-741a48bf9b3c) -->
