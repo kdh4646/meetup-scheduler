@@ -1,4 +1,4 @@
-//next/link get href property (NO to property)
+//next/link get 'href' property (NO 'to' property)
 import Link from "next/link";
 
 import classes from "./MainNavigation.module.css";
