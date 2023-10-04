@@ -1,14 +1,6 @@
-import MeetupList from "../components/meetups/MeetupList";
+import { MongoClient } from "mongodb";
 
-const DUMMY_MEETUPS = [
-  {
-    id: "m1",
-    title: "test",
-    image: "https://test.com",
-    address: "111",
-    description: "222",
-  },
-];
+import MeetupList from "../components/meetups/MeetupList";
 
 function HomePage(props) {
   return <MeetupList meetups={props.meetups} />;
@@ -20,11 +12,32 @@ function HomePage(props) {
     - Must use 'getStaticProps'
 */
 export async function getStaticProps() {
+  //fetch data
+  const client = await MongoClient.connect(
+    "mongodb+srv://kdh4646:oHjS8egRofmlBB1Q@cluster0.jiylnit.mongodb.net/meetups?retryWrites=true&w=majority"
+  );
+
+  const db = client.db();
+
+  //get meetups data
+  const meetupsCollection = db.collection("meetups");
+  const meetups = await meetupsCollection.find().toArray();
+
+  console.log(meetups);
+
+  client.close();
+
   //only execute during BUILD PROCESS
   return {
     //always name 'props'
     props: {
-      meetups: DUMMY_MEETUPS,
+      meetups: meetups.map((meetup) => ({
+        title: meetup.title,
+        address: meetup.address,
+        image: meetup.image,
+        description: meetup.description,
+        id: meetup._id.toString(),
+      })),
     },
     //wait time till regenerate page for updating
     revalidate: 10,
