@@ -10,8 +10,8 @@
 <!--
 - Implement a SPA for scheduling meetups
 
-1. Using Next.js
-
+1. Using Next.js framework
+2. Using MongdoDB Atlas database `npm install mongodb`
 
 1. Handling HTTP request
 1. Implementing async/await (fetch..then()) to get response
